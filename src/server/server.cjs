@@ -1,7 +1,7 @@
-import { MongoClient, ServerApiVersion, ObjectId } from "mongodb";
-import express from 'express';
-import path from 'path';
-import cors from 'cors';
+const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
+const express = require('express');
+const path = require('path');
+const cors = require('cors');
 
 const app = express();
 app.use(cors());
