@@ -53,7 +53,7 @@ app.post('/api/post-data', async (req, res) => {
 
 app.get('*', (req, res) => {
    const indexPath = path.join(new URL(import.meta.url).pathname, '../index.html');
-   res.sendFile('C:/Users/thaku/Feedback-form/index.html');
+   res.sendFile(indexPath);
  });
 
 app.listen(3000, () => {
