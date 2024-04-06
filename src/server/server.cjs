@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 // Replace the placeholder with your Atlas connection string
-const uri = "mongodb+srv://thakurayushi696:lctBAu40eViE8iEC@cluster0.qmkd5do.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const uri = process.env.URI;
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri,  {
         serverApi: {
@@ -37,6 +37,7 @@ async function run() {
 run().catch(console.dir);
 
 app.post('/api/post-data', async (req, res) => {
+  res.send("posting data")
   const data = req.body;
   if (!data._id) {
     data._id = new ObjectId(); 
