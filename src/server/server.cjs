@@ -36,7 +36,7 @@ async function run() {
 }
 run().catch(console.dir);
 
-app.post('/api/post-data', async (req, res) => {
+app.post('/', async (req, res) => {
   res.send("posting data")
   const data = req.body;
   if (!data._id) {
@@ -52,9 +52,9 @@ app.post('/api/post-data', async (req, res) => {
   }
 });
 
- app.get('/', (req, res) => {
-   res.send("api running")
-  });
+//  app.get('/', (req, res) => {
+//    res.send("api running")
+//   });
 
 
 module.exports = app;
