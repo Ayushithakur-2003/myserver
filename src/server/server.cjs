@@ -3,8 +3,12 @@ const express = require('express');
 const path = require('path');
 const cors = require('cors');
 
+const corsOptions = {
+  origin: 'https://feedbackuii.netlify.app/',
+};
+
 const app = express();
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 // Replace the placeholder with your Atlas connection string
 const uri = "mongodb+srv://thakurayushi696:lctBAu40eViE8iEC@cluster0.qmkd5do.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
