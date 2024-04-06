@@ -52,11 +52,11 @@ app.post('/api/post-data', async (req, res) => {
 });
 
 app.get('*', (req, res) => {
-   const indexPath = path.join(new URL(import.meta.url).pathname, '../index.html');
+  const indexPath = path.join(__dirname, '../index.html');
    res.sendFile(indexPath);
  });
 
- 
+
 app.listen(3000, () => {
 console.log('API listening on port 3000!');
 });
