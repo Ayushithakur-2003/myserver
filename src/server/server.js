@@ -61,13 +61,4 @@ app.listen(3000, () => {
 console.log('API listening on port 3000!');
 });
 
-// vf97EGdl5X3BykeHyREgchHeUxekwVV5YnNjPQsVC3Av9u7YS3GdTsf48tjczIqV
 
-var data = JSON.stringify({
-  "collection": "analysis-collection",
-  "database": "analysis",
-  "dataSource": "Cluster0",
-  "projection": {
-      "_id": 1
-  }
-});
