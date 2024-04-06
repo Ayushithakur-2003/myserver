@@ -51,10 +51,9 @@ app.post('/api/post-data', async (req, res) => {
   }
 });
 
-// app.get('*', (req, res) => {
-//   const indexPath = path.join(__dirname, '../index.html');
-//    res.sendFile(indexPath);
-//  });
+ app.get('/', (req, res) => {
+   res.send("api running")
+  });
 
 
 app.listen(3000, () => {
